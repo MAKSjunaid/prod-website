@@ -8,5 +8,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Tell Render to deploy
+      - name: Tell Render to deploy (mine)
         run: curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
+      - name: Tell Render to deploy (Nabil)
+        if: ${{ !cancelled() }}
+        run: curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK_NABIL }}"
