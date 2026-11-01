@@ -1,6 +1,6 @@
 /* Who is signed in and what they may open.
  *
- * The owner sees  everything. A staff login (made in Settings -> Users) only
+ * The owner sees everything. A staff login (made in Settings -> Users) only
  * sees the tabs / buttons the owner ticked. This file only HIDES things so the
  * screen matches the permissions — the server checks every request again, so
  * hiding is a convenience, never the lock itself.
